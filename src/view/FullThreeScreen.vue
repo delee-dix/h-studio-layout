@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import LeftLayout from '@/component/LeftLayout.vue';
+import MiddleLayout from '@/component/MiddleLayout.vue';
 import RightLayout from '@/component/RightLayout.vue';
 import GNB from '@/component/GNB.vue';
 </script>
@@ -9,6 +10,9 @@ import GNB from '@/component/GNB.vue';
         <div class="main-content">
             <div class="left">
                 <LeftLayout />
+            </div>
+            <div class="middle">
+                <MiddleLayout />
             </div>
             <div class="right">
                 <RightLayout />
@@ -35,13 +39,19 @@ import GNB from '@/component/GNB.vue';
 }
 
 .left {
-    flex: 1;    /* 화면 비율 조정 가능 */
+    flex: 2;    /* 화면 비율 조정 가능 */
+    border: 5px solid;
+    border-radius: 10px;
+}
+
+.middle {
+    flex: 3;    /* 화면 비율 조정 가능 */
     border: 5px solid;
     border-radius: 10px;
 }
 
 .right {
-    flex: 2;    /* 화면 비율 조정 가능 */
+    flex: 1;    /* 화면 비율 조정 가능 */
     border: 5px solid;
     border-radius: 10px;
 }
