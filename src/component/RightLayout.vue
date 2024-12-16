@@ -6,7 +6,7 @@
 </template>
 
 <script setup lang="ts">
-const imagePath = new URL('@/asset/right_full.png', import.meta.url).href;
+const imagePath = new URL('@/asset/right_short.png', import.meta.url).href;
 </script>
 
 <style scoped>
