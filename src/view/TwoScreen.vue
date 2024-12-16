@@ -5,22 +5,19 @@ import GNB from '@/component/GNB.vue';
 </script>
 
 <template>
-
-    <body>
-        <div class="container">
-            <div class="main-content">
-                <div class="left">
-                    <LeftLayout />
-                </div>
-                <div class="right">
-                    <RightLayout />
-                </div>
+    <div class="container">
+        <div class="main-content">
+            <div class="left">
+                <LeftLayout />
             </div>
-            <div class="gnb">
-                <GNB />
+            <div class="right">
+                <RightLayout />
             </div>
         </div>
-    </body>
+        <div class="gnb">
+            <GNB />
+        </div>
+    </div>
 </template>
 
 <style scoped>
@@ -28,7 +25,7 @@ import GNB from '@/component/GNB.vue';
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 75vh;
+    height: 75vh; /* 전체 화면 : 100vh, 축소 화면 : 75vh */
 }
 
 .main-content {
@@ -38,24 +35,18 @@ import GNB from '@/component/GNB.vue';
 }
 
 .left {
-    flex: 1; /* 화면 비율 조정 가능 */
+    flex: 1;    /* 화면 비율 조정 가능 */
     border: 5px solid;
     border-radius: 10px;
-    justify-content: center;
-
-    align-items: center;
 }
 
 .right {
-    flex: 2; /* 화면 비율 조정 가능 */
+    flex: 2;    /* 화면 비율 조정 가능 */
     border: 5px solid;
     border-radius: 10px;
-    justify-content: center;
-    align-items: center;
 }
 
 .gnb {
-    display: flex;
     width: 100%;
     height: 5vh;
     background-color: black;
