@@ -1,16 +1,16 @@
 <template>
-    <div class="rightLayout">
-        <!-- right -->
+    <div class="middleLayout">
+        <!-- middle -->
         <img :src="imagePath" alt="Sample Image" />
     </div>
 </template>
 
 <script setup lang="ts">
-const imagePath = new URL('@/asset/right_full.png', import.meta.url).href;
+const imagePath = new URL('@/asset/middle_full.png', import.meta.url).href;
 </script>
 
 <style scoped>
-.rightLayout {
+.leftLayout {
     display: flex;
     justify-content: center;
     align-items: center;
