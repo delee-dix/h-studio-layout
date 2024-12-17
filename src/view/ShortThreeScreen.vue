@@ -39,32 +39,18 @@ import GNB from '@/component/GNB.vue';
 }
 
 .left {
-    flex: 2;    /* 화면 비율 조정 가능 */
-    border: 5px solid;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    flex: 2;
 }
 
 .middle {
-    flex: 3;    /* 화면 비율 조정 가능 */
-    border: 5px solid;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    flex: 3;
 }
 
 .right {
-    flex: 1;    /* 화면 비율 조정 가능 */
-    border: 5px solid;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    flex: 1;
 }
 
 .gnb {
     width: 100%;
-    height: 5vh;
-    background-color: black;
-    color: white;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 </style>
