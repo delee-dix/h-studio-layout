@@ -19,7 +19,7 @@
     display: flex;
     padding: 10px;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
 

@@ -1,12 +1,14 @@
 <template>
     <div class="leftLayout">
-        <!-- left -->
         <img :src="imagePath" alt="Sample Image" />
     </div>
 </template>
 
 <script setup lang="ts">
-const imagePath = new URL('@/asset/left_short.png', import.meta.url).href;
+interface IProps {
+    imagePath: string;
+}
+defineProps<IProps>();
 </script>
 
 <style scoped>

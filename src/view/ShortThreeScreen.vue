@@ -3,19 +3,23 @@ import LeftLayout from '@/component/LeftLayout.vue';
 import MiddleLayout from '@/component/MiddleLayout.vue';
 import RightLayout from '@/component/RightLayout.vue';
 import GNB from '@/component/GNB.vue';
+
+const leftImagePath = new URL('@/asset/left_short.png', import.meta.url).href;
+const middleImagePath = new URL('@/asset/middle_short.png', import.meta.url).href;
+const rightImagePath = new URL('@/asset/right_short.png', import.meta.url).href;
 </script>
 
 <template>
     <div class="container">
         <div class="main-content">
             <div class="left">
-                <LeftLayout />
+                <LeftLayout :image-path="leftImagePath" />
             </div>
             <div class="middle">
-                <MiddleLayout />
+                <MiddleLayout :image-path="middleImagePath" />
             </div>
             <div class="right">
-                <RightLayout />
+                <RightLayout :image-path="rightImagePath" />
             </div>
         </div>
         <div class="gnb">
@@ -29,7 +33,7 @@ import GNB from '@/component/GNB.vue';
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 50%;    /* 전체 화면 : 68vh, 축소 화면 : 50% */
+    height: 50vh;
 }
 
 .main-content {
@@ -51,6 +55,6 @@ import GNB from '@/component/GNB.vue';
 }
 
 .gnb {
-    width: 100%;
+    width: 192.1%;
 }
 </style>
