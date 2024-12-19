@@ -1,25 +1,17 @@
 <script setup lang="ts">
 import LeftLayout from '@/component/LeftLayout.vue';
-import MiddleLayout from '@/component/MiddleLayout.vue';
 import RightLayout from '@/component/RightLayout.vue';
 import GNB from '@/component/GNB.vue';
-
-const leftImagePath = new URL('@/asset/left_full.png', import.meta.url).href;
-const middleImagePath = new URL('@/asset/middle_full.png', import.meta.url).href;
-const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
 </script>
 
 <template>
     <div class="container">
         <div class="main-content">
             <div class="left">
-                <LeftLayout :image-path="leftImagePath" />
-            </div>
-            <div class="middle">
-                <MiddleLayout :image-path="middleImagePath" />
+                <LeftLayout />
             </div>
             <div class="right">
-                <RightLayout :image-path="rightImagePath" />
+                <RightLayout />
             </div>
         </div>
         <div class="gnb">
@@ -33,7 +25,7 @@ const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 68vh;
+    height: 68vh; /* 전체 화면 : 100vh, 축소 화면 : 68vh */
 }
 
 .main-content {
@@ -43,18 +35,23 @@ const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
 }
 
 .left {
-    flex: 2;  
-}
-
-.middle {
-    flex: 3; 
+    flex: 1;    /* 화면 비율 조정 가능 */
+    border: 5px solid;
+    border-radius: 10px;
 }
 
 .right {
-    flex: 1; 
+    flex: 2;    /* 화면 비율 조정 가능 */
+    border: 5px solid;
+    border-radius: 10px;
 }
 
 .gnb {
-    width: 192.5%;
+    width: 100%;
+    height: 5vh;
+    background-color: black;
+    color: white;
+    border: 1px solid;
+    border-radius: 10px;
 }
 </style>

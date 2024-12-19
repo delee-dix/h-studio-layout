@@ -4,9 +4,9 @@ import MiddleLayout from '@/component/MiddleLayout.vue';
 import RightLayout from '@/component/RightLayout.vue';
 import GNB from '@/component/GNB.vue';
 
-const leftImagePath = new URL('@/asset/left_full.png', import.meta.url).href;
-const middleImagePath = new URL('@/asset/middle_full.png', import.meta.url).href;
-const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
+const leftImagePath = new URL('@/asset/left_short.png', import.meta.url).href;
+const middleImagePath = new URL('@/asset/middle_short.png', import.meta.url).href;
+const rightImagePath = new URL('@/asset/right_short.png', import.meta.url).href;
 </script>
 
 <template>
@@ -33,7 +33,7 @@ const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 68vh;
+    height: 50vh;
 }
 
 .main-content {
@@ -43,18 +43,18 @@ const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
 }
 
 .left {
-    flex: 2;  
+    flex: 2;
 }
 
 .middle {
-    flex: 3; 
+    flex: 3;
 }
 
 .right {
-    flex: 1; 
+    flex: 1;
 }
 
 .gnb {
-    width: 192.5%;
+    width: 192.1%;
 }
 </style>
