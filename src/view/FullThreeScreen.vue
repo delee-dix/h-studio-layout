@@ -55,6 +55,6 @@ const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
 }
 
 .gnb {
-    width: 192.5%;
+    width: 100%;
 }
 </style>
