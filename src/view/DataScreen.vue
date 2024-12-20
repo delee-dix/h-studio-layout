@@ -8,11 +8,12 @@ const leftImage = new URL('@/asset/left_image.png', import.meta.url).href;
 const leftChart = new URL('@/asset/left_chart.png', import.meta.url).href;
 const rightImage = new URL('@/asset/right_image.png', import.meta.url).href;
 const rightChart = new URL('@/asset/right_chart.png', import.meta.url).href;
+const rightData = new URL('@/asset/data_QR.png', import.meta.url).href;
 
-const leftImagePath = new URL('@/asset/left_full.png', import.meta.url).href;
-const rightImagePath = new URL('@/asset/data_QR.png', import.meta.url).href;
+const leftImagePath = new URL('@/asset/left_ott.png', import.meta.url).href;
+const rightImagePath = new URL('@/asset/right_ott.png', import.meta.url).href;
 
-const isOTT = ref(false);
+const isOTT = ref(true);
 </script>
 
 <template>
@@ -28,7 +29,12 @@ const isOTT = ref(false);
                 </div>
             </div>
             <div class="right">
-                <RightLayout :image-path="rightImagePath" />
+                <div v-if="isOTT">
+                    <RightLayout :image-path="rightImagePath" />
+                </div>
+                <div v-else>
+                    <RightLayout :image-path="rightData" />
+                </div>
             </div>
         </div>
         <div class="gnb" v-if="isOTT">
