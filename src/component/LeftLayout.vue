@@ -1,8 +1,8 @@
 <template>
     <div class="leftLayout">
-        <!-- <div v-if="isOTT"> -->
-        <img v-if="isOTT" :src="imagePath" alt="Sample Image" />
-        <!-- </div> -->
+        <div v-if="isOTT" class="ottScreen">
+            <img :src="imagePath" alt="Sample Image" />
+        </div>
         <div v-else class="dataScreen">
             <div class="title">
                 Data Analysis
@@ -33,7 +33,7 @@ interface IProps {
 }
 defineProps<IProps>();
 
-const isOTT = ref(false);
+const isOTT = ref(true);
 
 </script>
 
@@ -53,6 +53,15 @@ const isOTT = ref(false);
 
     img {
         height: 100%;
+    }
+
+    .ottScreen {
+        background-color: black;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        object-fit: contain;
+        height: 65vh;
     }
 
     .dataScreen {
