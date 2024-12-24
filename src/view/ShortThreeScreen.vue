@@ -38,6 +38,7 @@ const rightImagePath = new URL('@/asset/right_short.png', import.meta.url).href;
 
 .main-content {
     display: flex;
+    flex: 1;
     width: 100%;
 }
 
