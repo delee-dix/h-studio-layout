@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import LeftLayout from '@/component/LeftLayout.vue';
 import RightLayout from '@/component/RightLayout.vue';
 import GNB from '@/component/GNB.vue';
-import { ref } from 'vue';
 
 const leftImage = new URL('@/asset/left_image.png', import.meta.url).href;
 const leftChart = new URL('@/asset/left_chart.png', import.meta.url).href;
@@ -11,33 +11,33 @@ const rightChart = new URL('@/asset/right_chart.png', import.meta.url).href;
 const rightData = new URL('@/asset/data_QR.png', import.meta.url).href;
 
 const leftImagePath = new URL('@/asset/left_ott.png', import.meta.url).href;
-const rightImagePath = new URL('@/asset/right_ott.png', import.meta.url).href;
+const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
 
-const isOTT = ref(true);
+const isOtt = ref(true);
 </script>
 
 <template>
     <div class="container">
         <div class="main-content">
             <div class="left">
-                <div v-if="isOTT">
-                    <LeftLayout :image-path="leftImagePath" />
-                </div>
-                <div v-else>
+                <template v-if="isOtt">
+                    <LeftLayout :image-path="leftImagePath" :is-ott="isOtt"/>
+                </template>
+                <template v-else>
                     <LeftLayout :left-image="leftImage" :left-chart="leftChart" :right-image="rightImage"
-                        :right-chart="rightChart" />
-                </div>
+                        :right-chart="rightChart" :is-ott="isOtt" />
+                </template>
             </div>
             <div class="right">
-                <div v-if="isOTT">
+                <template v-if="isOtt">
                     <RightLayout :image-path="rightImagePath" />
-                </div>
-                <div v-else>
+                </template>
+                <template v-else>
                     <RightLayout :image-path="rightData" />
-                </div>
+                </template>
             </div>
         </div>
-        <div class="gnb" v-if="isOTT">
+        <div class="gnb" v-if="isOtt">
             <GNB />
         </div>
     </div>
