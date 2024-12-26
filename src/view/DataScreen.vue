@@ -4,6 +4,7 @@ import LeftLayout from '@/component/LeftLayout.vue';
 import RightLayout from '@/component/RightLayout.vue';
 import GNB from '@/component/GNB.vue';
 
+
 const leftImage = new URL('@/asset/left_image.png', import.meta.url).href;
 const leftChart = new URL('@/asset/left_chart.png', import.meta.url).href;
 const rightImage = new URL('@/asset/right_image.png', import.meta.url).href;
@@ -14,6 +15,7 @@ const leftImagePath = new URL('@/asset/left_ott.png', import.meta.url).href;
 const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
 
 const isOtt = ref(true);
+
 </script>
 
 <template>
@@ -38,6 +40,7 @@ const isOtt = ref(true);
             </div>
         </div>
         <div class="gnb" v-if="isOtt">
+
             <GNB />
         </div>
     </div>
