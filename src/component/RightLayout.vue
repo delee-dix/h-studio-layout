@@ -25,6 +25,7 @@ defineProps<IProps>();
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     img {
+        width: 100%;
         height: 100%;
     }
 }
