@@ -1,14 +1,13 @@
 <template>
     <div class="leftLayout">
         <div v-if="isOtt" class="ottScreen">
-
             <img :src="imagePath" alt="Sample Image" />
         </div>
         <div v-else class="dataScreen">
             <div class="title">
                 Data Analysis
             </div>
-            <div class="image-container">
+            <div class="imageContainer">
                 <div class="leftInfo">
                     <img :src="leftImage" class="leftImage" alt="1" />
                     <img :src="leftChart" class="leftChart" alt="2" />
@@ -23,8 +22,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-
 interface IProps {
     imagePath?: string | undefined;
     leftImage?: string | undefined;
@@ -32,12 +29,8 @@ interface IProps {
     rightImage?: string | undefined;
     rightChart?: string | undefined;
     isOtt: boolean;
-
 }
 defineProps<IProps>();
-
-const isOTT = ref(true);
-
 </script>
 
 <style scoped>
@@ -84,7 +77,7 @@ const isOTT = ref(true);
         padding: 20px;
     }
 
-    .image-container {
+    .imageContainer {
         display: flex;
         gap: 20px;
     }
@@ -93,12 +86,6 @@ const isOTT = ref(true);
     .rightInfo {
         display: flex;
         flex-direction: column;
-    }
-
-    img {
-        width: 100%;
-        height: auto;
-        /* max-width: 200px; */
     }
 }
 </style>
