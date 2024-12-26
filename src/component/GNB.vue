@@ -1,7 +1,7 @@
 <template>
     <div class="gnb_container">
         <div class="condition_left">
-            (car) < 24.5℃ > (seat)
+            (car) < 24.5℃> (seat)
         </div>
         <div class="gnb_icon">
             <button @click="showModal = true">Home</button>
@@ -22,7 +22,7 @@
             | gnb2 gnb3 gnb4
         </div>
         <div class="condition_right">
-            (front) (rear) < 24.5℃ > (seat)
+            (front) (rear) < 24.5℃> (seat)
         </div>
     </div>
 </template>
@@ -50,9 +50,7 @@ const showModal = ref(false);
     border-bottom-right-radius: 10px;
 }
 
-.condition_left
-.gnb_icon
-.condition_right {
+.condition_left .gnb_icon .condition_right {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,6 +59,5 @@ const showModal = ref(false);
 
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;    /* contain? */
 }
 </style>

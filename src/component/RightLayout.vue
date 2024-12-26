@@ -20,10 +20,10 @@ defineProps<IProps>();
     max-width: 100%;
     max-height: 100%;
     height: 100%;
-    object-fit: cover;    /* contain? */
     border: 5px solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+
     img {
         width: 100%;
         height: 100%;
