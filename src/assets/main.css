@@ -3,7 +3,13 @@
 #app {
   max-width: none;
   margin: 0 auto;
-  /* padding: 2rem; */
   font-weight: normal;
   object-fit: cover;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
 }
