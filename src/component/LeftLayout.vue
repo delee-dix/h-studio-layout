@@ -28,7 +28,7 @@ interface IProps {
     leftChart?: string | undefined;
     rightImage?: string | undefined;
     rightChart?: string | undefined;
-    isOtt: boolean;
+    isOtt?: boolean;
 }
 defineProps<IProps>();
 </script>
