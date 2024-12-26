@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import FullThreeScreen from './view/FullThreeScreen.vue';
 import ShortThreeScreen from './view/ShortThreeScreen.vue';
-import TwoScreen from './view/TwoScreen.vue';
+import FullTwoScreen from './view/FullTwoScreen.vue';
+import ShortTwoScreen from './view/ShortTwoScreen.vue';
+import DataScreen from './view/DataScreen.vue';
 </script>
 
 <template>
-  <!-- <TwoScreen /> -->
+  <!-- <FullTwoScreen /> -->
+  <!-- <ShortTwoScreen /> -->
   <!-- <FullThreeScreen /> -->
-  <ShortThreeScreen />
+  <!-- <ShortThreeScreen /> -->
+  <DataScreen />
 </template>
 
 <style scoped>
