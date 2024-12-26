@@ -1,13 +1,13 @@
 <template>
     <div class="gnb_container">
         <div class="condition_left">
-            (car) < 24.5℃ > (seat)
+            (car) < 24.5℃> (seat)
         </div>
         <div class="gnb_icon">
             gnb1 | gnb2 | gnb3 | gnb4
         </div>
         <div class="condition_right">
-            (front) (rear) < 24.5℃ > (seat)
+            (front) (rear) < 24.5℃> (seat)
         </div>
     </div>
 </template>
@@ -30,9 +30,7 @@
     border-bottom-right-radius: 10px;
 }
 
-.condition_left
-.gnb_icon
-.condition_right {
+.condition_left .gnb_icon .condition_right {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,6 +39,5 @@
 
     max-width: 100%;
     max-height: 100%;
-    object-fit: cover;    /* contain? */
 }
 </style>
