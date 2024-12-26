@@ -58,7 +58,6 @@ defineProps<IProps>();
         justify-items: center;
         align-items: center;
         object-fit: contain;
-        height: 65vh;
     }
 
     .dataScreen {
