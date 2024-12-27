@@ -14,7 +14,7 @@ const rightData = new URL('@/asset/data_QR.png', import.meta.url).href;
 const leftImagePath = new URL('@/asset/left_ott.png', import.meta.url).href;
 const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
 
-const isData = ref(true);
+const isData = ref(false);
 
 </script>
 
@@ -23,19 +23,19 @@ const isData = ref(true);
         <div class="main-content">
             <div class="left">
                 <template v-if="isData">
-                    <LeftLayout :image-path="leftImagePath" :is-data="isData"/>
-                </template>
-                <template v-else>
                     <LeftLayout :left-image="leftImage" :left-chart="leftChart" :right-image="rightImage"
                         :right-chart="rightChart" :is-data="isData" />
+                </template>
+                <template v-else>
+                    <LeftLayout :image-path="leftImagePath" :is-data="isData"/>
                 </template>
             </div>
             <div class="right">
                 <template v-if="isData">
-                    <RightLayout :image-path="rightImagePath" />
+                    <RightLayout :image-path="rightData" />
                 </template>
                 <template v-else>
-                    <RightLayout :image-path="rightData" />
+                    <RightLayout :image-path="rightImagePath" />
                 </template>
             </div>
         </div>
