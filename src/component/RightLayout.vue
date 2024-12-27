@@ -1,12 +1,15 @@
 <template>
     <div class="rightLayout">
-        <img :src="imagePath" alt="Sample Image" />
+        <!-- <img :src="imagePath" alt="Sample Image" /> -->
+         <!-- if, camping-->
+         <div :style="{ backgroundImage: backgroundImage }"></div>
     </div>
 </template>
 
 <script setup lang="ts">
 interface IProps {
     imagePath?: string | undefined;
+    backgroundImage?: string;
 }
 defineProps<IProps>();
 </script>
@@ -23,6 +26,7 @@ defineProps<IProps>();
     border: 5px solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-repeat: no-repeat;
 
     img {
         width: 100%;
