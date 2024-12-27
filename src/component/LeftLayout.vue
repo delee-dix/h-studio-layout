@@ -1,9 +1,6 @@
 <template>
     <div class="leftLayout">
-        <div v-if="isOtt" class="ottScreen">
-            <img :src="imagePath" alt="Sample Image" />
-        </div>
-        <div v-else class="dataScreen">
+        <div v-if="isData" class="dataScreen">
             <div class="title">
                 Data Analysis
             </div>
@@ -18,6 +15,9 @@
                 </div>
             </div>
         </div>
+        <div v-else class="defaultScreen">
+            <img :src="imagePath" alt="Sample Image" />
+        </div>
     </div>
 </template>
 
@@ -28,7 +28,7 @@ interface IProps {
     leftChart?: string | undefined;
     rightImage?: string | undefined;
     rightChart?: string | undefined;
-    isOtt?: boolean;
+    isData?: boolean;
 }
 defineProps<IProps>();
 </script>
@@ -51,12 +51,11 @@ defineProps<IProps>();
         height: 100%;
     }
 
-    .ottScreen {
+    .defaultScreen {
         background-color: black;
         display: flex;
         justify-items: center;
         align-items: center;
-        object-fit: contain;
     }
 
     .dataScreen {

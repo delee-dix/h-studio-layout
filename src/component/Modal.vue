@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { ref, defineEmits } from 'vue';
+import { ref } from 'vue';
 
-const emit = defineEmits(['close']);
 const currentPage = ref(0);
 const pages = [1, 2, 3];
 
@@ -10,7 +9,7 @@ const diffX = ref(0);
 const minSwipeDistance = 50;
 
 function close() {
-    emit('close');
+    defineEmits(['close']);
 }
 
 function onTouchStart(event: TouchEvent) {
@@ -83,7 +82,8 @@ function onTouchEnd() {
 }
 
 .page {
-    flex: 0 0 100%;    /* 각 페이지는 100% 너비를 차지 */
+    flex: 0 0 100%;
+    /* 각 페이지는 100% 너비를 차지 */
     padding: 20px;
     text-align: center;
     box-sizing: border-box;

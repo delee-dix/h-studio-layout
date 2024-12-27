@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 interface IProps {
-    imagePath: string;
+    imagePath?: string | undefined;
 }
 defineProps<IProps>();
 </script>
