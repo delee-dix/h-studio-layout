@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, toValue } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import LeftLayout from '@/component/LeftLayout.vue';
 import RightLayout from '@/component/RightLayout.vue';
 import GNB from '@/component/GNB.vue';
@@ -11,6 +11,7 @@ const leftImagePath = [
     new URL('@/asset/camping_left_4.png', import.meta.url).href,
     new URL('@/asset/camping_left_4.png', import.meta.url).href,
     new URL('@/asset/camping_left_4.png', import.meta.url).href,
+    new URL('@/asset/camping_left_4.png', import.meta.url).href,
 ];
 const rightImagePath = [
     new URL('@/asset/camping_right_1.png', import.meta.url).href,
@@ -19,6 +20,7 @@ const rightImagePath = [
     new URL('@/asset/camping_right_4.png', import.meta.url).href,
     new URL('@/asset/camping_right_5.png', import.meta.url).href,
     new URL('@/asset/camping_right_6.png', import.meta.url).href,
+    new URL('@/asset/camping_right_7.png', import.meta.url).href,
 ];
 
 const currentImageLeft = ref(leftImagePath[0]);
@@ -47,6 +49,11 @@ const switchImages = () => {
         stopImageSwitch();
         showButton.value = true;
         return;
+    }
+    if (index1 === 6) {
+        stopImageSwitch();
+        // routing
+        
     }
 };
 

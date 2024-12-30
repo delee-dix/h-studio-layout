@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, defineEmits } from 'vue';
 
 const currentPage = ref(0);
 const pages = [1, 2, 3];
@@ -8,9 +8,11 @@ const startX = ref(0);
 const diffX = ref(0);
 const minSwipeDistance = 50;
 
-function close() {
-    defineEmits(['close']);
-}
+const emit = defineEmits(['close']);
+const close = () => {
+    console.log("closeModal emitted");
+    emit("close");
+};
 
 function onTouchStart(event: TouchEvent) {
     startX.value = event.touches[0].clientX;
@@ -35,7 +37,7 @@ function onTouchEnd() {
 </script>
 
 <template>
-    <div class="modal-overlay" @click="close">
+    <div class="modal-overlay" @click.self="close">
         <div class="modal" @click.stop>
             <div class="slider-container" :style="{ transform: `translateX(-${currentPage * 100}%)` }"
                 @touchstart="onTouchStart" @touchmove="onTouchMove" @touchend="onTouchEnd">
@@ -53,12 +55,12 @@ function onTouchEnd() {
 
 <style scoped>
 .modal-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: 0;
+    right: 16%;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,10 +68,11 @@ function onTouchEnd() {
 }
 
 .modal {
-    background: black;
+    background: rgba(0, 0, 0, 0.5);;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
     width: 100%;
     max-width: 500px;
     overflow: hidden;
