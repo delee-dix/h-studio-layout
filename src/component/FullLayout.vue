@@ -1,8 +1,6 @@
 <template>
-    <div class="rightLayout">
-        <!-- <img :src="imagePath" alt="Sample Image" /> -->
-         <!-- if, camping-->
-         <div :style="{ backgroundImage: backgroundImage }"></div>
+    <div class="fullLayout">
+        <img :src="imagePath" alt="Sample Image" />
     </div>
 </template>
 
@@ -15,7 +13,7 @@ defineProps<IProps>();
 </script>
 
 <style scoped>
-.rightLayout {
+.fullLayout {
     display: flex;
     justify-content: center;
     align-items: center;

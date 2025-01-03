@@ -16,13 +16,16 @@
             </div>
         </div>
         <div v-else class="defaultScreen">
-            <img :src="imagePath" alt="Sample Image" />
+            <!-- <img :src="imagePath" alt="Sample Image" /> -->
+            <!-- if, camping-->
+            <div :style="{ backgroundImage: backgroundImage }"></div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
 interface IProps {
+    backgroundImage?: string;
     imagePath?: string | undefined;
     leftImage?: string | undefined;
     leftChart?: string | undefined;
@@ -45,6 +48,7 @@ defineProps<IProps>();
     border: 5px solid;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    background-repeat: no-repeat;
 
     img {
         width: 100%;

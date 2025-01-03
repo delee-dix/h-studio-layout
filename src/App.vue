@@ -4,14 +4,16 @@ import ShortThreeScreen from './view/ShortThreeScreen.vue';
 import FullTwoScreen from './view/FullTwoScreen.vue';
 import ShortTwoScreen from './view/ShortTwoScreen.vue';
 import DataScreen from './view/DataScreen.vue';
+import Camping from './view/Camping.vue';
 </script>
 
 <template>
   <!-- <FullTwoScreen /> -->
   <!-- <ShortTwoScreen /> -->
   <!-- <FullThreeScreen /> -->
-  <ShortThreeScreen />
+  <!-- <ShortThreeScreen /> -->
   <!-- <DataScreen /> -->
+  <Camping />
 </template>
 
 <style scoped>
