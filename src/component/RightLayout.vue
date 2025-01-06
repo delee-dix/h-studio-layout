@@ -1,5 +1,15 @@
 <template>
     <div class="rightLayout">
+        <div class="status-bar">
+            <div class="content">
+                <SearchIcon />
+                <BellIcon />
+                <BluetoothIcon />
+                <WifiIcon />
+                <LteIcon />
+                <div class="time">오후 2:01</div>
+            </div>
+        </div>
         <div class="whether-container">
             <div class="header">
                 <div class="handle"></div>
@@ -65,8 +75,13 @@
 </template>
 
 <script setup lang="ts">
+import BellIcon from './icon/BellIcon.vue';
+import BluetoothIcon from './icon/BluetoothIcon.vue';
+import LteIcon from './icon/LteIcon.vue';
+import SearchIcon from './icon/SearchIcon.vue';
 import WhetherIcon from './icon/WhetherIcon.vue';
 import WhetherSmallIcon from './icon/WhetherSmallIcon.vue';
+import WifiIcon from './icon/WifiIcon.vue';
 
 interface IProps {
     imagePath?: string | undefined;
@@ -77,11 +92,37 @@ defineProps<IProps>();
 <style scoped>
 .rightLayout {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
     width: 100%;
     height: 100%;
+
+    .status-bar {
+        display: flex;
+        width: 100%;
+        padding: 12px 24px;
+        height: 88px;
+        align-items: center;
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+            gap: 22px;
+            width: 100%;
+            height: 64px;
+            background-color: white;
+
+            .time {
+                font-size: 28px;
+                font-weight: 500;
+                color: #1C1C1D;
+            }
+        }
+    }
 
     .whether-container {
         display: flex;
