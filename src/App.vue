@@ -9,8 +9,8 @@ import DataScreen from './view/DataScreen.vue';
 <template>
   <!-- <FullTwoScreen /> -->
   <!-- <ShortTwoScreen /> -->
-  <!-- <FullThreeScreen /> -->
-  <ShortThreeScreen />
+  <FullThreeScreen />
+  <!-- <ShortThreeScreen /> -->
   <!-- <DataScreen /> -->
 </template>
 
