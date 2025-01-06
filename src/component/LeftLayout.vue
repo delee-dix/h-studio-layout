@@ -58,6 +58,10 @@
             <div class="gear-bar">
                 <GearBar />
             </div>
+            <div class="battery-info">
+                <div class="distance">316km</div>
+                <BatteryIcon />
+            </div>
         </div>
     </div>
 </template>
@@ -68,6 +72,7 @@ import HdaIcon from './icon/HdaIcon.vue';
 import LeftCarModel from './illust/LeftCarModel.vue';
 import LockIcon from './icon/LockIcon.vue';
 import GearBar from './illust/GearBar.vue';
+import BatteryIcon from './icon/BatteryIcon.vue';
 
 const activeGear = ref('P');
 
@@ -271,8 +276,13 @@ defineProps<IProps>();
                         }
                     }
                 }
-
             }
+
+            .speed {
+                font-size: 24px;
+                color: #8F8F93;
+            }
+
         }
 
         .gear-bar {
@@ -281,6 +291,21 @@ defineProps<IProps>();
             left: 0;
         }
 
+        .battery-info {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+            position: absolute;
+            top: 14px;
+            right: 22px;
+
+            .distance {
+                font-size: 28px;
+                font-weight: 500;
+                color: #1C1C1D;
+            }
+        }
     }
 
     .dataScreen {
