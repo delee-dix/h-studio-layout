@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import Cluster from '@/component/CommonCluster.vue';
-import Forecast from '@/component/CommonForecast.vue';
+import CommonCluster from '@/component/CommonCluster.vue';
+import CommonForecast from '@/component/CommonForecast.vue';
 import GNB from '@/layout/GNB.vue';
 
 const leftImage = new URL('@/asset/img/img_left_image.png', import.meta.url).href;
@@ -21,7 +21,7 @@ const isData = ref(false);
     <div class="main-content">
       <div class="left">
         <template v-if="isData">
-          <Cluster
+          <CommonCluster
             :left-image="leftImage"
             :left-chart="leftChart"
             :right-image="rightImage"
@@ -30,15 +30,15 @@ const isData = ref(false);
           />
         </template>
         <template v-else>
-          <Cluster :image-path="leftImagePath" :is-data="isData" />
+          <CommonCluster :image-path="leftImagePath" :is-data="isData" />
         </template>
       </div>
       <div class="right">
         <template v-if="isData">
-          <Forecast :image-path="rightData" />
+          <CommonForecast :image-path="rightData" />
         </template>
         <template v-else>
-          <Forecast :image-path="rightImagePath" />
+          <CommonForecast :image-path="rightImagePath" />
         </template>
       </div>
     </div>

@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import Cluster from '@/component/CommonCluster.vue';
-import Navigation from '@/component/CommonNavigation.vue';
-import Forecast from '@/component/CommonForecast.vue';
 import GNB from '@/layout/GNB.vue';
 import StatusBar from '@/layout/StatusBar.vue';
+
+import CommonCluster from '@/component/CommonCluster.vue';
+import CommonNavigation from '@/component/CommonNavigation.vue';
+import CommonForecast from '@/component/CommonForecast.vue';
 
 const middleImagePath = new URL('@/asset/img/img_middle_full.png', import.meta.url).href;
 </script>
@@ -15,13 +16,13 @@ const middleImagePath = new URL('@/asset/img/img_middle_full.png', import.meta.u
     </div>
     <div class="main-content">
       <div class="left">
-        <Cluster />
+        <CommonCluster />
       </div>
       <div class="middle">
-        <Navigation :image-path="middleImagePath" />
+        <CommonNavigation :image-path="middleImagePath" />
       </div>
       <div class="right">
-        <Forecast />
+        <CommonForecast />
       </div>
     </div>
     <div class="gnb">

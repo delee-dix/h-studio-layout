@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Cluster from '@/component/CommonCluster.vue';
-import Forecast from '@/component/CommonForecast.vue';
+import CommonCluster from '@/component/CommonCluster.vue';
+import CommonForecast from '@/component/CommonForecast.vue';
 import GNB from '@/layout/GNB.vue';
 
 const leftImagePath = new URL('@/asset/img/ic_left_1.png', import.meta.url).href;
@@ -11,10 +11,10 @@ const rightImagePath = new URL('@/asset/img/ic_right_1.png', import.meta.url).hr
   <div class="container">
     <div class="main-content">
       <div class="left">
-        <Cluster :image-path="leftImagePath" />
+        <CommonCluster :image-path="leftImagePath" />
       </div>
       <div class="right">
-        <Forecast :image-path="rightImagePath" />
+        <CommonForecast :image-path="rightImagePath" />
       </div>
     </div>
     <div class="gnb">
