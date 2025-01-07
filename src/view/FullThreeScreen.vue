@@ -33,7 +33,10 @@ const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 68vh;
+    height: 100%;
+    border: 10px solid #5C5C5C;
+    overflow: hidden;
+    border-radius: 24px;
 }
 
 .main-content {
