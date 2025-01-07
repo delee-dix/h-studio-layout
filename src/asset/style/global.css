@@ -13,12 +13,17 @@
 }
 
 #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  color: #2c3e50;
   max-width: none;
   margin: 0 auto;
-  font-weight: normal;
   object-fit: cover;
   box-sizing: border-box;
   height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
