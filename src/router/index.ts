@@ -6,8 +6,23 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: App,
+      name: 'ux',
+      component: () => import('@/view/UxView.vue'),
+    },
+    {
+      path: '/ux',
+      name: 'ux',
+      component: () => import('@/view/UxView.vue'),
+    },
+    {
+      path: '/connect-s',
+      name: 'connect-s',
+      component: () => import('@/view/ConnectSView.vue'),
+    },
+    {
+      path: '/connect-w',
+      name: 'connect-w',
+      component: () => import('@/view/ConnectWView.vue'),
     },
   ],
 });
