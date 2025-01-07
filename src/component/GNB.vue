@@ -1,3 +1,19 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import Modal from './Modal.vue';
+import AppsIcon from './icon/AppsIcon.vue';
+import FrontIcon from './icon/FrontIcon.vue';
+import RearIcon from './icon/RearIcon.vue';
+import HeaterLeftIcon from './icon/HeaterLeftIcon.vue';
+import HeaterRightIcon from './icon/HeaterRightIcon.vue';
+import CarIcon from './icon/CarIcon.vue';
+import ArrowLeftIcon from './icon/ArrowLeftIcon.vue';
+import ArrowRightIcon from './icon/ArrowRightIcon.vue';
+import AirconIcon from './icon/AirconIcon.vue';
+
+const showModal = ref(false);
+</script>
+
 <template>
   <div class="gnb-container">
     <div class="condition-left">
@@ -50,22 +66,6 @@
     </template>
   </Modal>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-import Modal from './Modal.vue';
-import AppsIcon from './icon/AppsIcon.vue';
-import FrontIcon from './icon/FrontIcon.vue';
-import RearIcon from './icon/RearIcon.vue';
-import HeaterLeftIcon from './icon/HeaterLeftIcon.vue';
-import HeaterRightIcon from './icon/HeaterRightIcon.vue';
-import CarIcon from './icon/CarIcon.vue';
-import ArrowLeftIcon from './icon/ArrowLeftIcon.vue';
-import ArrowRightIcon from './icon/ArrowRightIcon.vue';
-import AirconIcon from './icon/AirconIcon.vue';
-
-const showModal = ref(false);
-</script>
 
 <style scoped>
 .gnb-container {

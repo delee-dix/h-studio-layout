@@ -3,23 +3,19 @@ import Cluster from '@/component/Cluster.vue';
 import Navigation from '@/component/Navigation.vue';
 import Forecast from '@/component/Forecast.vue';
 import GNB from '@/component/GNB.vue';
-
-const leftImagePath = new URL('@/asset/img/img_left_full.png', import.meta.url).href;
-const middleImagePath = new URL('@/asset/img/img_middle_full.png', import.meta.url).href;
-const rightImagePath = new URL('@/asset/img/img_right_full.png', import.meta.url).href;
 </script>
 
 <template>
   <div class="container">
     <div class="main-content">
       <div class="left">
-        <Cluster :image-path="leftImagePath" />
+        <Cluster />
       </div>
       <div class="middle">
-        <Navigation :image-path="middleImagePath" />
+        <Navigation />
       </div>
       <div class="right">
-        <Forecast :image-path="rightImagePath" />
+        <Forecast />
       </div>
     </div>
     <div class="gnb">

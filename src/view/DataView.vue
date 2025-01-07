@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+
 import Cluster from '@/component/Cluster.vue';
 import Forecast from '@/component/Forecast.vue';
 import GNB from '@/component/GNB.vue';
@@ -9,7 +10,6 @@ const leftChart = new URL('@/asset/img/img_left_chart.png', import.meta.url).hre
 const rightImage = new URL('@/asset/img/img_right_image.png', import.meta.url).href;
 const rightChart = new URL('@/asset/img/img_right_chart.png', import.meta.url).href;
 const rightData = new URL('@/asset/img/img_data_qr.png', import.meta.url).href;
-
 const leftImagePath = new URL('@/asset/img/img_left_ott.png', import.meta.url).href;
 const rightImagePath = new URL('@/asset/img/img_right_full.png', import.meta.url).href;
 

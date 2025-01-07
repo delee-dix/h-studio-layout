@@ -1,3 +1,36 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import HdaIcon from './icon/HdaIcon.vue';
+import LeftCarModel from './illust/LeftCarModel.vue';
+import LockIcon from './icon/LockIcon.vue';
+import GearBar from './illust/GearBar.vue';
+import BatteryIcon from './icon/BatteryIcon.vue';
+
+const activeGear = ref('P');
+const isOn = ref(false);
+
+const gears = ['P', 'R', 'N', 'D'];
+
+const toggleSwitch = () => {
+  isOn.value = !isOn.value;
+};
+
+const setActiveGear = (gear: string) => {
+  if (!gears.includes(gear)) return;
+  activeGear.value = gear;
+};
+
+interface IProps {
+  imagePath?: string | undefined;
+  leftImage?: string | undefined;
+  leftChart?: string | undefined;
+  rightImage?: string | undefined;
+  rightChart?: string | undefined;
+  isData?: boolean;
+}
+defineProps<IProps>();
+</script>
+
 <template>
   <div class="leftLayout">
     <div v-if="isData" class="dataScreen">
@@ -68,40 +101,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-import HdaIcon from './icon/HdaIcon.vue';
-import LeftCarModel from './illust/LeftCarModel.vue';
-import LockIcon from './icon/LockIcon.vue';
-import GearBar from './illust/GearBar.vue';
-import BatteryIcon from './icon/BatteryIcon.vue';
-
-const activeGear = ref('P');
-
-const isOn = ref(false);
-
-const gears = ['P', 'R', 'N', 'D'];
-
-const toggleSwitch = () => {
-  isOn.value = !isOn.value;
-};
-
-const setActiveGear = (gear: string) => {
-  if (!gears.includes(gear)) return;
-  activeGear.value = gear;
-};
-
-interface IProps {
-  imagePath?: string | undefined;
-  leftImage?: string | undefined;
-  leftChart?: string | undefined;
-  rightImage?: string | undefined;
-  rightChart?: string | undefined;
-  isData?: boolean;
-}
-defineProps<IProps>();
-</script>
 
 <style scoped>
 .leftLayout {

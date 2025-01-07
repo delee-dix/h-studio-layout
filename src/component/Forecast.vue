@@ -1,3 +1,18 @@
+<script setup lang="ts">
+import BellIcon from './icon/BellIcon.vue';
+import BluetoothIcon from './icon/BluetoothIcon.vue';
+import LteIcon from './icon/LteIcon.vue';
+import SearchIcon from './icon/SearchIcon.vue';
+import WhetherIcon from './icon/WhetherIcon.vue';
+import WhetherSmallIcon from './icon/WhetherSmallIcon.vue';
+import WifiIcon from './icon/WifiIcon.vue';
+
+interface IProps {
+  imagePath?: string | undefined;
+}
+defineProps<IProps>();
+</script>
+
 <template>
   <div class="rightLayout">
     <div class="status-bar">
@@ -70,21 +85,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import BellIcon from './icon/BellIcon.vue';
-import BluetoothIcon from './icon/BluetoothIcon.vue';
-import LteIcon from './icon/LteIcon.vue';
-import SearchIcon from './icon/SearchIcon.vue';
-import WhetherIcon from './icon/WhetherIcon.vue';
-import WhetherSmallIcon from './icon/WhetherSmallIcon.vue';
-import WifiIcon from './icon/WifiIcon.vue';
-
-interface IProps {
-  imagePath?: string | undefined;
-}
-defineProps<IProps>();
-</script>
 
 <style scoped>
 .rightLayout {

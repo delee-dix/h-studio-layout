@@ -1,19 +1,3 @@
-<template>
-  <div class="middleLayout">
-    <RouteModal />
-    <div class="image-container" @click="toggleZoom">
-      <img
-        :style="{
-          transform: `scale(${zoomScale})`,
-          transformOrigin: transformOrigin,
-        }"
-        :src="imagePath"
-        alt="Zoomable Image"
-      />
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
 import { ref } from 'vue';
 import RouteModal from './RouteModal.vue';
@@ -38,6 +22,22 @@ interface IProps {
 }
 defineProps<IProps>();
 </script>
+
+<template>
+  <div class="middleLayout">
+    <RouteModal />
+    <div class="image-container" @click="toggleZoom">
+      <img
+        :style="{
+          transform: `scale(${zoomScale})`,
+          transformOrigin: transformOrigin,
+        }"
+        :src="imagePath"
+        alt="Zoomable Image"
+      />
+    </div>
+  </div>
+</template>
 
 <style scoped>
 .middleLayout {

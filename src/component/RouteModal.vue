@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+const showRouteModal = ref(true);
+
+const handleClick = (image: string) => {
+  alert(`${image} clicked`);
+};
+</script>
+
 <template>
   <div>
     <div v-if="showRouteModal" class="modal">
@@ -29,15 +38,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref } from 'vue';
-const showRouteModal = ref(true);
-
-const handleClick = (image: string) => {
-  alert(`${image} clicked`);
-};
-</script>
 
 <style scoped>
 .modal {
