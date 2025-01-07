@@ -11,5 +11,5 @@ const iconPath = computed(() => `/src/asset/img/ic_whether_${props.iconName}.svg
 </script>
 
 <template>
-  <img :src="iconPath" alt="" width="32" height="32" />
+  <img :src="iconPath" alt="whether icons" width="32" height="32" />
 </template>

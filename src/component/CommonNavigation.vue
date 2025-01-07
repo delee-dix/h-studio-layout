@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import RouteModal from './RouteModal.vue';
+import CommonNavigationModal from './CommonNavigationModal.vue';
 
 const isZoomed = ref(false); // 확대 여부 상태
 const zoomScale = ref(1); // 확대 배율 상태
@@ -25,7 +25,7 @@ defineProps<IProps>();
 
 <template>
   <div class="middle-layout">
-    <!-- <RouteModal /> -->
+    <CommonNavigationModal />
     <div class="image-container" @click="toggleZoom">
       <img
         :style="{
