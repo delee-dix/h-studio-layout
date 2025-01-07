@@ -1,15 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+
 import Modal from './Modal.vue';
+
 import AppsIcon from './icon/AppsIcon.vue';
-import FrontIcon from './icon/FrontIcon.vue';
-import RearIcon from './icon/RearIcon.vue';
-import HeaterLeftIcon from './icon/HeaterLeftIcon.vue';
-import HeaterRightIcon from './icon/HeaterRightIcon.vue';
-import CarIcon from './icon/CarIcon.vue';
+import GnbIcon from './icon/GnbIcon.vue';
 import ArrowLeftIcon from './icon/ArrowLeftIcon.vue';
 import ArrowRightIcon from './icon/ArrowRightIcon.vue';
-import AirconIcon from './icon/AirconIcon.vue';
 
 const showModal = ref(false);
 </script>
@@ -17,14 +14,14 @@ const showModal = ref(false);
 <template>
   <div class="gnb-container">
     <div class="condition-left">
-      <CarIcon />
+      <GnbIcon :iconName="'car'" />
       <div class="temp">
         <ArrowLeftIcon />
         24.5°
         <ArrowRightIcon />
       </div>
-      <AirconIcon />
-      <HeaterRightIcon />
+      <GnbIcon :iconName="'aircon'" />
+      <GnbIcon :iconName="'heater_right'" />
     </div>
     <div class="gnb-icon">
       <div class="gnb-icon-left">
@@ -41,14 +38,14 @@ const showModal = ref(false);
       </div>
     </div>
     <div class="condition-right">
-      <FrontIcon />
-      <RearIcon />
+      <GnbIcon :iconName="'front'" />
+      <GnbIcon :iconName="'rear'" />
       <div class="temp">
         <ArrowLeftIcon />
         24.5°
         <ArrowRightIcon />
       </div>
-      <HeaterLeftIcon />
+      <GnbIcon :iconName="'heater_left'" />
     </div>
   </div>
   <Modal v-if="showModal" @close="showModal = false">
