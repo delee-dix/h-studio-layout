@@ -6,8 +6,8 @@ import DataView from './view/DataView.vue';
 
 <template>
   <!-- <TwoLayoutView /> -->
-  <ThreeLayoutView />
   <!-- <DataView /> -->
+  <ThreeLayoutView />
 </template>
 
 <style scoped>
