@@ -42,12 +42,6 @@ const rightImagePath = new URL('@/asset/route_right.png', import.meta.url).href;
     width: 100%;
 }
 
-/* .middle {
-    transition: transform 0.5s ease-in-out;
-    transform: scale(1.2);
-    background-size: 120%;
-} */
-
 .gnb {
     width: 100%;
 }
