@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+
 import HdaIcon from './icon/HdaIcon.vue';
-import LeftCarModel from './illust/LeftCarModel.vue';
 import LockIcon from './icon/LockIcon.vue';
-import GearBar from './illust/GearBar.vue';
 import BatteryIcon from './icon/BatteryIcon.vue';
+import LeftCarModel from './img/LeftCarModel.vue';
+import GearBar from './img/GearBar.vue';
 
 const activeGear = ref('P');
 const isOn = ref(false);
