@@ -1,19 +1,13 @@
 <script setup lang="ts">
-import FullThreeScreen from './view/FullThreeScreen.vue';
-import ShortThreeScreen from './view/ShortThreeScreen.vue';
-import FullTwoScreen from './view/FullTwoScreen.vue';
-import ShortTwoScreen from './view/ShortTwoScreen.vue';
-import DataScreen from './view/DataScreen.vue';
-import Route from './view/route.vue';
+import ThreeLayoutView from './view/ThreeLayoutView.vue';
+import TwoLayoutView from './view/TwoLayoutView.vue';
+import DataView from './view/DataView.vue';
 </script>
 
 <template>
-  <!-- <FullTwoScreen /> -->
-  <!-- <ShortTwoScreen /> -->
-  <!-- <FullThreeScreen /> -->
-  <!-- <ShortThreeScreen /> -->
-  <!-- <DataScreen /> -->
-  <Route />
+  <!-- <TwoLayoutView /> -->
+  <ThreeLayoutView />
+  <!-- <DataView /> -->
 </template>
 
 <style scoped>

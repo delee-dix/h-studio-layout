@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import LeftLayout from '@/component/LeftLayout.vue';
-import RightLayout from '@/component/RightLayout.vue';
+import Cluster from '@/component/Cluster.vue';
+import Forecast from '@/component/Forecast.vue';
 import GNB from '@/component/GNB.vue';
 
 
@@ -23,19 +23,19 @@ const isData = ref(false);
         <div class="main-content">
             <div class="left">
                 <template v-if="isData">
-                    <LeftLayout :left-image="leftImage" :left-chart="leftChart" :right-image="rightImage"
+                    <Cluster :left-image="leftImage" :left-chart="leftChart" :right-image="rightImage"
                         :right-chart="rightChart" :is-data="isData" />
                 </template>
                 <template v-else>
-                    <LeftLayout :image-path="leftImagePath" :is-data="isData"/>
+                    <Cluster :image-path="leftImagePath" :is-data="isData"/>
                 </template>
             </div>
             <div class="right">
                 <template v-if="isData">
-                    <RightLayout :image-path="rightData" />
+                    <Forecast :image-path="rightData" />
                 </template>
                 <template v-else>
-                    <RightLayout :image-path="rightImagePath" />
+                    <Forecast :image-path="rightImagePath" />
                 </template>
             </div>
         </div>

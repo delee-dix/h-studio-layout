@@ -1,20 +1,20 @@
 <script setup lang="ts">
-import LeftLayout from '@/component/LeftLayout.vue';
-import RightLayout from '@/component/RightLayout.vue';
+import Cluster from '@/component/Cluster.vue';
+import Forecast from '@/component/Forecast.vue';
 import GNB from '@/component/GNB.vue';
 
-const leftImagePath = new URL('@/asset/left_2.png', import.meta.url).href;
-const rightImagePath = new URL('@/asset/right_2.png', import.meta.url).href;
+const leftImagePath = new URL('@/asset/left_1.png', import.meta.url).href;
+const rightImagePath = new URL('@/asset/right_1.png', import.meta.url).href;
 </script>
 
 <template>
     <div class="container">
         <div class="main-content">
             <div class="left">
-                <LeftLayout :image-path="leftImagePath" />
+                <Cluster :image-path="leftImagePath" />
             </div>
             <div class="right">
-                <RightLayout :image-path="rightImagePath" />
+                <Forecast :image-path="rightImagePath" />
             </div>
         </div>
         <div class="gnb">
@@ -28,11 +28,12 @@ const rightImagePath = new URL('@/asset/right_2.png', import.meta.url).href;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 50vh;
+    height: 68vh;
 }
 
 .main-content {
     display: flex;
+    flex: 1;
     width: 100%;
 }
 

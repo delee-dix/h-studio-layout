@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import LeftLayout from '@/component/LeftLayout.vue';
-import MiddleLayout from '@/component/MiddleLayout.vue';
-import RightLayout from '@/component/RightLayout.vue';
+import Cluster from '@/component/Cluster.vue';
+import Navigation from '@/component/Navigation.vue';
+import Forecast from '@/component/Forecast.vue';
 import GNB from '@/component/GNB.vue';
 
 const leftImagePath = new URL('@/asset/left_full.png', import.meta.url).href;
@@ -13,13 +13,13 @@ const rightImagePath = new URL('@/asset/right_full.png', import.meta.url).href;
     <div class="container">
         <div class="main-content">
             <div class="left">
-                <LeftLayout :image-path="leftImagePath" />
+                <Cluster :image-path="leftImagePath" />
             </div>
             <div class="middle">
-                <MiddleLayout :image-path="middleImagePath" />
+                <Navigation :image-path="middleImagePath" />
             </div>
             <div class="right">
-                <RightLayout :image-path="rightImagePath" />
+                <Forecast :image-path="rightImagePath" />
             </div>
         </div>
         <div class="gnb">
