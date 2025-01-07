@@ -15,16 +15,6 @@ defineProps<IProps>();
 
 <template>
   <div class="right-layout">
-    <div class="status-bar">
-      <div class="content">
-        <SearchIcon />
-        <BellIcon />
-        <BluetoothIcon />
-        <WifiIcon />
-        <LteIcon />
-        <div class="time">오후 2:01</div>
-      </div>
-    </div>
     <div class="whether-container">
       <div class="header">
         <div class="handle"></div>
@@ -95,31 +85,6 @@ defineProps<IProps>();
   overflow: hidden;
   width: 100%;
   height: 100%;
-
-  .status-bar {
-    display: flex;
-    width: 100%;
-    padding: 12px 24px;
-    height: 88px;
-    align-items: center;
-
-    .content {
-      display: flex;
-      flex-direction: row;
-      justify-content: end;
-      align-items: center;
-      gap: 22px;
-      width: 100%;
-      height: 64px;
-      background-color: white;
-
-      .time {
-        font-size: 28px;
-        font-weight: 500;
-        color: #1c1c1d;
-      }
-    }
-  }
 
   .whether-container {
     display: flex;

@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import Cluster from '@/component/Cluster.vue';
-import Forecast from '@/component/Forecast.vue';
-import GNB from '@/component/GNB.vue';
+import Cluster from '@/component/CommonCluster.vue';
+import Forecast from '@/component/CommonForecast.vue';
+import GNB from '@/layout/GNB.vue';
 
 const leftImage = new URL('@/asset/img/img_left_image.png', import.meta.url).href;
 const leftChart = new URL('@/asset/img/img_left_chart.png', import.meta.url).href;

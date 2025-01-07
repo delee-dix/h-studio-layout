@@ -25,7 +25,7 @@ defineProps<IProps>();
 
 <template>
   <div class="middle-layout">
-    <RouteModal />
+    <!-- <RouteModal /> -->
     <div class="image-container" @click="toggleZoom">
       <img
         :style="{

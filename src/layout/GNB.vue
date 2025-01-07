@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-import Modal from './Modal.vue';
+import Modal from '@/component/CommonModal.vue';
 
-import AppsIcon from './icon/AppsIcon.vue';
-import GnbIcon from './icon/GnbIcon.vue';
-import ArrowLeftIcon from './icon/ArrowLeftIcon.vue';
-import ArrowRightIcon from './icon/ArrowRightIcon.vue';
+import AppsIcon from '@/component/icon/AppsIcon.vue';
+import GnbIcon from '@/component/icon/GnbIcon.vue';
+import ArrowLeftIcon from '@/component/icon/ArrowLeftIcon.vue';
+import ArrowRightIcon from '@/component/icon/ArrowRightIcon.vue';
 
 const showModal = ref(false);
 </script>
