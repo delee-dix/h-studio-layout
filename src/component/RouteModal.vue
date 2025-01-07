@@ -10,14 +10,14 @@ const handleClick = (image: string) => {
 <template>
   <div>
     <div v-if="showRouteModal" class="modal">
-      <div class="modalContent">
-        <div class="searchArea">
+      <div class="modal-content">
+        <div class="search-area">
           <img src="@/asset/img/img_search.png" />
         </div>
-        <div class="iconArea">
+        <div class="icon-area">
           <img src="@/asset/img/ic_icon.png" />
         </div>
-        <div class="buttonArea">
+        <div class="button-area">
           <img
             src="@/asset/img/ic_button_1.png"
             alt="Sample Image"
@@ -52,7 +52,7 @@ const handleClick = (image: string) => {
   justify-content: center;
 }
 
-.modalContent {
+.modal-content {
   background: white;
   padding: 20px;
   border-radius: 10px;
@@ -61,21 +61,21 @@ const handleClick = (image: string) => {
   height: 600px;
 }
 
-.searchArea {
+.search-area {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
 }
 
-.iconArea {
+.icon-area {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
 }
 
-.buttonArea {
+.button-area {
   display: flex;
   flex-direction: column;
   gap: 10px;

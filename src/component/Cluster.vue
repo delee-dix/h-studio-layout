@@ -32,21 +32,21 @@ defineProps<IProps>();
 </script>
 
 <template>
-  <div class="leftLayout">
-    <div v-if="isData" class="dataScreen">
+  <div class="left-layout">
+    <div v-if="isData" class="data-screen">
       <div class="title">Data Analysis</div>
-      <div class="imageContainer">
-        <div class="leftInfo">
-          <img :src="leftImage" class="leftImage" alt="1" />
-          <img :src="leftChart" class="leftChart" alt="2" />
+      <div class="image-container">
+        <div class="left-info">
+          <img :src="leftImage" class="left-image" alt="1" />
+          <img :src="leftChart" class="left-chart" alt="2" />
         </div>
-        <div class="rightInfo">
-          <img :src="rightImage" class="rightImage" alt="3" />
-          <img :src="rightChart" class="rightChart" alt="4" />
+        <div class="right-info">
+          <img :src="rightImage" class="right-image" alt="3" />
+          <img :src="rightChart" class="right-chart" alt="4" />
         </div>
       </div>
     </div>
-    <div v-else class="defaultScreen">
+    <div v-else class="default-screen">
       <div class="speed-info">
         <div class="gear-info">
           <template v-if="activeGear === 'P'">
@@ -103,7 +103,7 @@ defineProps<IProps>();
 </template>
 
 <style scoped>
-.leftLayout {
+.left-layout {
   display: flex;
   position: relative;
   justify-content: center;
@@ -117,7 +117,7 @@ defineProps<IProps>();
     height: 100%;
   }
 
-  .defaultScreen {
+  .default-screen {
     display: flex;
     width: 100%;
     height: 100%;
@@ -308,7 +308,7 @@ defineProps<IProps>();
     }
   }
 
-  .dataScreen {
+  .data-screen {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -324,13 +324,13 @@ defineProps<IProps>();
     padding: 20px;
   }
 
-  .imageContainer {
+  .image-container {
     display: flex;
     gap: 20px;
   }
 
-  .leftInfo,
-  .rightInfo {
+  .left-info,
+  .right-info {
     display: flex;
     flex-direction: column;
   }

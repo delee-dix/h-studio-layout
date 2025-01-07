@@ -14,7 +14,7 @@ defineProps<IProps>();
 </script>
 
 <template>
-  <div class="rightLayout">
+  <div class="right-layout">
     <div class="status-bar">
       <div class="content">
         <SearchIcon />
@@ -87,7 +87,7 @@ defineProps<IProps>();
 </template>
 
 <style scoped>
-.rightLayout {
+.right-layout {
   display: flex;
   flex-direction: column;
   justify-content: center;

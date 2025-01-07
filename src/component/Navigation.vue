@@ -24,7 +24,7 @@ defineProps<IProps>();
 </script>
 
 <template>
-  <div class="middleLayout">
+  <div class="middle-layout">
     <RouteModal />
     <div class="image-container" @click="toggleZoom">
       <img
@@ -40,7 +40,7 @@ defineProps<IProps>();
 </template>
 
 <style scoped>
-.middleLayout {
+.middle-layout {
   display: flex;
   justify-content: center;
   align-items: center;
