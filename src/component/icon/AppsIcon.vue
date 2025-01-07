@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import { defineProps, computed } from 'vue';
 
-
 type IconName = 'navi' | 'media' | 'bluetooth' | 'phone' | 'menu' | 'ott' | 'routines';
 
 const props = defineProps<{
   iconName: IconName;
 }>();
 
-const iconPath = computed(() => `/src/asset/ic-apps-${props.iconName}.svg`);
+const iconPath = computed(() => `/src/asset/img/ic_apps_${props.iconName}.svg`);
 </script>
 
 <template>

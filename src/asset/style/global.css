@@ -11,3 +11,17 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+
+#app {
+  max-width: none;
+  margin: 0 auto;
+  font-weight: normal;
+  object-fit: cover;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}

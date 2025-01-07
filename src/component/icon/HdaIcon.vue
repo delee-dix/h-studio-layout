@@ -2,9 +2,11 @@
   <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
     <rect width="36" height="36" rx="18" fill="#6052EE" />
     <circle cx="18.0008" cy="17.9989" r="10.1786" stroke="white" stroke-width="2.5" />
-    <path fill-rule="evenodd" clip-rule="evenodd"
+    <path
+      fill-rule="evenodd"
+      clip-rule="evenodd"
       d="M8.61719 15.5547H26.9845V18.82C21.107 18.82 19.6376 24.9424 19.6376 27.7996H16.7805C16.7805 24.9424 15.1478 18.82 8.61719 18.82V15.5547ZM18.0037 20.4509C18.9054 20.4509 19.6364 19.7199 19.6364 18.8182C19.6364 17.9165 18.9054 17.1855 18.0037 17.1855C17.1021 17.1855 16.3711 17.9165 16.3711 18.8182C16.3711 19.7199 17.1021 20.4509 18.0037 20.4509Z"
-      fill="white" />
+      fill="white"
+    />
   </svg>
-
 </template>

@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-const imagePath = new URL('@/asset/img-gear-bar.png', import.meta.url).href;
+const imagePath = new URL('@/asset/img/img_gear_bar.png', import.meta.url).href;
 </script>
 
 <style scoped>
