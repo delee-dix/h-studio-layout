@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  color: #2c3e50;
+  max-width: none;
+  margin: 0 auto;
+  object-fit: cover;
+  box-sizing: border-box;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+}
