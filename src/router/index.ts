@@ -1,3 +1,4 @@
+import UxView from '@/view/UxView.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const router = createRouter({
@@ -5,7 +6,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'ux',
+      name: '',
       component: () => import('@/view/UxView.vue'),
     },
     {
