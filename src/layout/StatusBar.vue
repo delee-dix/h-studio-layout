@@ -1,19 +1,15 @@
 <script setup lang="ts">
-import BellIcon from '@/component/icon/BellIcon.vue';
-import BluetoothIcon from '@/component/icon/BluetoothIcon.vue';
-import LteIcon from '@/component/icon/LteIcon.vue';
-import SearchIcon from '@/component/icon/SearchIcon.vue';
-import WifiIcon from '@/component/icon/WifiIcon.vue';
+import StatusBarIcon from '@/component/icon/StatusBarIcon.vue';
 </script>
 
 <template>
   <div class="status-bar">
     <div class="content">
-      <SearchIcon />
-      <BellIcon />
-      <BluetoothIcon />
-      <WifiIcon />
-      <LteIcon />
+      <StatusBarIcon :icon-name="'search'" />
+      <StatusBarIcon :icon-name="'bell'" />
+      <StatusBarIcon :icon-name="'bluetooth'" />
+      <StatusBarIcon :icon-name="'wifi'" />
+      <StatusBarIcon :icon-name="'5g'" />
       <div class="time">오후 2:01</div>
     </div>
   </div>
